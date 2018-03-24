@@ -184,19 +184,19 @@ truffle(development)> EthTxt = require('ethereumjs-tx')
 truffle(development)> tx = new EthTxt(txParams)
 ```
 
-#### Now will get our privateKey to sign the attack transaction.
+#### Now we'll get our privateKey to sign the attack transaction.
 
 ```bash
 truffle(development)> privateKey = Buffer.from(‘PRIVATE_KEY_OF_ATTACKER_ADDRESS’, ‘hex’)
 ```
 
-#### Now we will sign the transaction with our private key.
+#### Now we'll sign the transaction with our private key.
 
 ```bash
 truffle(development)> tx.sign(privateKey)
 ```
 
-#### Now we will sign the transaction using our privateKey and transaction instance
+#### Now we'll send the transaction
 
 ```bash
 truffle(development)> web3.eth.sendRawTransaction(`0x${tx.serialize().toString('hex')}`)
