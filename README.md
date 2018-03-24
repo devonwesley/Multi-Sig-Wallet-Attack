@@ -190,6 +190,12 @@ truffle(development)> tx = new EthTxt(txParams)
 truffle(development)> privateKey = Buffer.from(‘PRIVATE_KEY_OF_ATTACKER_ADDRESS’, ‘hex’)
 ```
 
+#### Now we will sign the transaction with our private key.
+
+```bash
+truffle(development)> tx.sign(privateKey)
+```
+
 #### Now we will sign the transaction using our privateKey and transaction instance
 
 ```bash
